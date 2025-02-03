@@ -17,9 +17,12 @@ const Footer = () => {
         {/* Contact Details Section */}
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
           <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
-          <p>Phone: +63 0917... / 0917....</p>
-          <p>Email: pangasinanassessorsoffice@gmail.com</p>
-          <p>Address: Pangasinan Assessor's Office</p>
+          <p>Phone: +639177059912</p>
+          <p>Email: Sales.vitezzaconstruction@gmail.com</p>
+          <p>
+            Unit 12 2A Lotus Queen Building, Cagayan Valley Road, Sta Rita
+            Guiguinto Bulacan
+          </p>
         </div>
 
         {/* Location Map Section */}

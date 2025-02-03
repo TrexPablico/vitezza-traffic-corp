@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="overflow-hidden bg-yellow-500 relative px-10">
+    <nav className="overflow-hidden bg-gray-200 relative px-10">
       <div className="container mx-auto flex justify-between items-center py-4">
         <img src={nav} alt="logo" className="w-20" />
 

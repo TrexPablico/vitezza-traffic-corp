@@ -14,13 +14,15 @@ import { BsCircleHalf } from "react-icons/bs";
 const Services = () => {
   return (
     <div className="bg-[#636363] p-8">
-      <h2 className="text-center text-3xl mb-8 text-white">Our Services</h2>
+      <h2 className="text-center text-3xl mb-8 text-white">
+        Products & Services
+      </h2>
       <div className="flex flex-wrap justify-center items-center gap-12">
         <div className="w-60 flex flex-col items-center space-y-4 text-center">
           <FaPaintRoller className="text-4xl text-white" />
           <div>
             <h3 className="text-xl font-semibold text-white">
-              Thermoplastic Reflectorized Paint Application
+              Reflectorized thermoplastic road marking materials
             </h3>
             <p className="text-white">
               Thermoplastic lane marking materials and their application.
@@ -79,7 +81,8 @@ const Services = () => {
               Guardrails Installation
             </h3>
             <p className="text-white">
-              Installation of protective metal bar railings along highways.
+              Supply and installation of all types of metal flex beam guardrails
+              for highways.
             </p>
           </div>
         </div>
@@ -113,7 +116,7 @@ const Services = () => {
               Asphalt Services
             </h3>
             <p className="text-white">
-              Supply and application of various types of asphalt.
+              Road studs Supply and installation of all types of road studs
             </p>
           </div>
         </div>
