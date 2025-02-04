@@ -11,7 +11,9 @@ const About = () => {
       {/* White overlay for background shade */}
       <div className="relative flex items-center justify-center h-full">
         <div className="text-center p-8">
-          <h1 className="text-3xl font-bold mb-4">Traffic Safety Company</h1>
+          <h1 className="text-3xl font-bold mb-4">
+            A Construction chemical Company
+          </h1>
           <p className="text-lg">
             VITEZZA CORPORATION, a 100% Filipino-owned chemical manufacturing
             company, supplies construction materials with a focus on quality and
