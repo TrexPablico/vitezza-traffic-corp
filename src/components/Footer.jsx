@@ -1,3 +1,6 @@
+import React from "react";
+import { FaFacebook, FaEnvelope } from "react-icons/fa"; // Import FaEnvelope
+
 const Footer = () => {
   return (
     <footer className="bg-gray-200 text-black py-10 mt-10">
@@ -7,27 +10,27 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/" className=" hover:underline">
+              <a href="/" className="hover:underline">
                 Home
               </a>
             </li>
             <li>
-              <a href="#services" className=" hover:underline">
+              <a href="#services" className="hover:underline">
                 Services
               </a>
             </li>
             <li>
-              <a href="#products" className=" hover:underline">
+              <a href="#products" className="hover:underline">
                 Products
               </a>
             </li>
             <li>
-              <a href="#about" className=" hover:underline">
+              <a href="#about" className="hover:underline">
                 About
               </a>
             </li>
             <li>
-              <a href="#contact" className=" hover:underline">
+              <a href="#contact" className="hover:underline">
                 Contact
               </a>
             </li>
@@ -43,6 +46,36 @@ const Footer = () => {
             Unit 12 2A Lotus Queen Building, Cagayan Valley Road, Sta Rita
             Guiguinto Bulacan
           </p>
+          <div className="mt-4 flex flex-col space-y-2">
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://web.facebook.com/VitezzaCandS?_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-blue-600"
+              >
+                <FaFacebook
+                  size={24}
+                  className="hover:scale-110 transition-transform duration-200"
+                />
+              </a>
+              <p>Vitezza Corporation</p>
+            </div>
+            <div className="flex items-center space-x-2">
+              <a
+                href="mailto:Sales.vitezzaconstruction@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-blue-600"
+              >
+                <FaEnvelope
+                  size={24}
+                  className="hover:scale-110 transition-transform duration-200"
+                />
+              </a>
+              <p>Sales.vitezzaconstruction@gmail.com</p>
+            </div>
+          </div>
         </div>
 
         {/* Location Map Section */}
