@@ -6,11 +6,31 @@ const Footer = () => {
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
           <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li>Home</li>
-            <li>Services</li>
-            <li>Products</li>
-            <li>About Us</li>
-            <li>Contact</li>
+            <li>
+              <a href="/" className=" hover:underline">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#services" className=" hover:underline">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#products" className=" hover:underline">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#about" className=" hover:underline">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className=" hover:underline">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 

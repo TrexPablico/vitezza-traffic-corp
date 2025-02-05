@@ -3,6 +3,11 @@ import sample from "../assets/Projects/sample.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img1 from "../assets/Projects/p1.jpg";
+import img2 from "../assets/Projects/p2.jpg";
+import img3 from "../assets/Projects/p3.jpg";
+import img4 from "../assets/Projects/p4.jpg";
+import img5 from "../assets/Projects/p5.jpg";
 
 const Projects = () => {
   const settings = {
@@ -43,46 +48,40 @@ const Projects = () => {
   const projectSamples = [
     {
       id: 1,
-      title: "Project 1",
-      description: "Description for Project 1",
-      img: sample,
+      title: "Thermo Plastic Paint",
+      description: "",
+      img: img1,
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "Description for Project 2",
-      img: sample,
+      title: "Road Sign",
+      description: "",
+      img: img2,
     },
     {
       id: 3,
-      title: "Project 3",
-      description: "Description for Project 3",
-      img: sample,
+      title: "Guard Rails",
+      description: "",
+      img: img3,
     },
     {
       id: 4,
-      title: "Project 4",
-      description: "Description for Project 4",
-      img: sample,
+      title: "",
+      description: "",
+      img: img4,
     },
     {
       id: 5,
-      title: "Project 5",
-      description: "Description for Project 5",
-      img: sample,
-    },
-    {
-      id: 6,
-      title: "Project 6",
-      description: "Description for Project 6",
-      img: sample,
+      title: "",
+      description: "",
+      img: img5,
     },
   ];
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8" id="products">
       <h2 className="text-center text-3xl font-bold mb-8">
-        Our Projects/Gallery/Products
+        {/*} Our Projects/Products */}
       </h2>
       <Slider {...settings}>
         {projectSamples.map((project) => (

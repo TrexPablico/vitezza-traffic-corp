@@ -10,7 +10,7 @@ const About = () => {
       <div className="absolute inset-0 bg-white opacity-60"></div>{" "}
       {/* White overlay for background shade */}
       <div className="relative flex items-center justify-center h-full">
-        <div className="text-center p-8">
+        <div className="text-center p-8" id="about">
           <h1 className="text-3xl font-bold mb-4">
             A Construction chemical Company
           </h1>

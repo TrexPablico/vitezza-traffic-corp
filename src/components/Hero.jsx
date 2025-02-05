@@ -13,9 +13,11 @@ const Hero = () => {
         <div className="text-white p-8 mb-40">
           <h1 className="text-5xl font-bold mb-4">Vitezza Corporation.</h1>
           <p className="text-3xl mb-8">A Construction chemical Company</p>
-          <button className="bg-red-500 text-white px-6 py-3 rounded-md">
-            Learn More
-          </button>
+          <a href="#services">
+            <button className="bg-red-500 text-white px-6 py-3 rounded-md">
+              Learn More
+            </button>
+          </a>
         </div>
       </div>
     </div>

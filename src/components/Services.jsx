@@ -13,7 +13,7 @@ import { BsCircleHalf } from "react-icons/bs";
 
 const Services = () => {
   return (
-    <div className="bg-[#636363] p-8">
+    <div className="bg-[#636363] p-8" id="services">
       <h2 className="text-center text-3xl mb-8 text-white">
         Products & Services
       </h2>

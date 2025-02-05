@@ -59,7 +59,7 @@ const Contact = () => {
       }}
       data-aos="fade-up"
     >
-      <div className="absolute inset-0 bg-white opacity-80"></div>
+      <div className="absolute inset-0 bg-white opacity-80" id="contact"></div>
       <div className="relative flex flex-col md:flex-row justify-between gap-40 mt-20 p-10 rounded-lg">
         <div className="md:w-1/2 mb-8 md:mb-0 ">
           <h3 className="text-2xl font-bold mb-4">

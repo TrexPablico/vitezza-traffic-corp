@@ -6,23 +6,23 @@ import { AiOutlineClose } from "react-icons/ai";
 const NavMenu = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
   },
   {
     title: "Services",
-    url: "#",
+    url: "#services",
   },
   {
     title: "Products",
-    url: "#",
+    url: "#products",
   },
   {
     title: "About",
-    url: "#",
+    url: "#about",
   },
   {
     title: "Contact",
-    url: "#",
+    url: "#contact",
   },
 ];
 
@@ -33,6 +33,19 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleSmoothScroll = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="overflow-hidden bg-gray-200 relative px-10">
       <div className="container mx-auto flex justify-between items-center py-4">
@@ -40,7 +53,12 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-4">
           {NavMenu.map((item, index) => (
-            <a key={index} href={item.url} className="text-black">
+            <a
+              key={index}
+              href={item.url}
+              className="text-black"
+              onClick={handleSmoothScroll}
+            >
               {item.title}
             </a>
           ))}
@@ -59,26 +77,29 @@ const Navbar = () => {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-yellow-500">
-          {NavMenu.map((item, index) => (
-            <a
-              key={index}
-              href={item.url}
-              className="block text-black py-2 px-4"
-            >
-              {item.title}
-            </a>
-          ))}
+      <div
+        className={`md:hidden bg-gray-200 dropdown-menu ${
+          isOpen ? "show" : ""
+        }`}
+      >
+        {NavMenu.map((item, index) => (
           <a
-            href="tel:+639177059912"
-            className="flex items-center text-black py-2 px-4"
+            key={index}
+            href={item.url}
+            className="block text-black py-2 px-4"
+            onClick={handleSmoothScroll}
           >
-            <FaPhone className="mr-2" />
-            Call Us +639177059912
+            {item.title}
           </a>
-        </div>
-      )}
+        ))}
+        <a
+          href="tel:+639177059912"
+          className="flex items-center text-black py-2 px-4"
+        >
+          <FaPhone className="mr-2" />
+          Call Us +639177059912
+        </a>
+      </div>
     </nav>
   );
 };
