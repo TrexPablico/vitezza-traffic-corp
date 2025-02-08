@@ -8,9 +8,6 @@ import {
 import contactimg from "../assets/Contact/contactimg.jpg";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import contact from "../assets/Contact/contactimg.jpg";
 
 const Contact = () => {
   const form = useRef();
@@ -18,9 +15,27 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Validation
+    const userName = form.current.user_name.value;
+    const userEmail = form.current.user_email.value;
+    const userMessage = form.current.user_message.value;
+
+    const nameRegex = /^[A-Za-z\s]{1,25}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{1,30}$/;
+
+    if (!nameRegex.test(userName)) {
+      toast.error("Invalid name. Only letters and spaces are allowed");
+      return;
+    }
+
+    if (!emailRegex.test(userEmail)) {
+      toast.error("Invalid email address.");
+      return;
+    }
+
     emailjs
-      .sendForm("service_", "template_", form.current, {
-        publicKey: "xFX7lbU3Y_",
+      .sendForm("service_b8jby58", "template_j0gai0d", form.current, {
+        publicKey: "er2OeSBrYYEZ8zs2f",
       })
       .then(
         () => {
@@ -41,15 +56,6 @@ const Contact = () => {
       );
     e.target.reset();
   };
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     offset: 200,
-  //     duration: 800,
-  //     easing: "ease-in-sine",
-  //     delay: 100,
-  //   });
-  // }, []);
 
   return (
     <div
@@ -118,7 +124,7 @@ const Contact = () => {
             <div>
               <label className="block text-gray-700">Your Message</label>
               <textarea
-                name="message"
+                name="user_message"
                 rows="6"
                 placeholder="Enter your message"
                 required
@@ -127,7 +133,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-white rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 bg-red-400 hover:bg-yellow-500"
+              className="w-full px-4 py-2 text-white rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 bg-red-500 hover:bg-yellow-500"
             >
               Send Message
             </button>

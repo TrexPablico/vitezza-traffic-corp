@@ -66,7 +66,7 @@ const Footer = () => {
                 href="mailto:Sales.vitezzaconstruction@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-blue-600"
+                className="text-black hover:text-red-600"
               >
                 <FaEnvelope
                   size={24}
